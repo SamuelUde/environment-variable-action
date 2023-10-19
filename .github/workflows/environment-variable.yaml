@@ -2,7 +2,9 @@ name: Environment Variables
 env:
   WORKSPACE_ENVIRONMENT_VARIABLE: 'Workspace environment variable'
   OVER_RIDE: 'Workflow'
-on: [push]
+on:
+  pull_request:
+    branches: env
 jobs:
   ubuntu:
     env:
